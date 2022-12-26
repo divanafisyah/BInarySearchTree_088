@@ -22,4 +22,12 @@ namespace BinarySearchTree
             rchild = r;
         }
     }
+    class BinaryTree
+    {
+        public node ROOT;
+        public BinaryTree()
+        {
+            ROOT = null; //initializing ROOT to null
+        }
+    }
 }
