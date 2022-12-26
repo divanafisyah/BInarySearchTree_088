@@ -111,5 +111,54 @@ namespace BinarySearchTree
                 Console.Write(ptr.info + " ");
             }
         }
+        
+        static void Main(string[] args)
+        {
+            BinaryTree x = new BinaryTree();
+            while(true)
+            {
+                Console.WriteLine("\nMenu");
+                Console.WriteLine("1. Implement Insert Operation");
+                Console.WriteLine("2. Perform Inorder Traversal");
+                Console.WriteLine("3. Perform Preorder Traversal");
+                Console.WriteLine("4. Perform Postorder Traversal");
+                Console.WriteLine("5. Exit");
+                Console.Write("\nEnter your choice (1-5) :");
+                char ch = Convert.ToChar(Console.ReadLine());
+                Console.WriteLine();
+                switch (ch)
+                {
+                    case '1':
+                        {
+                            Console.WriteLine("Enter a word :");
+                            string word = Console.ReadLine();
+                            x.insert(word);
+                        }
+                        break;
+                    case '2':
+                        {
+                            x.inorder(x.ROOT);
+                        }
+                        break;
+                    case '3':
+                        {
+                            x.preorder(x.ROOT);
+                        }
+                        break;
+                    case '4':
+                        {
+                            x.postorder(x.ROOT);
+                        }
+                        break;
+                    case '5':
+                        return;
+                    default:
+                        {
+                            Console.WriteLine("Invalid Option");
+                            break;
+                        }
+                }
+            }
+        }
     }
 }
